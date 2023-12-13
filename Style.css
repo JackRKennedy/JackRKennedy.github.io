@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #0f2045;
+    opacity: 1;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    color: #e2dabc;
+    overflow-x: hidden;
+}
+
+/* 
+Defining color palette for use on website
+
+Blue: #0f2045
+Cream: #e2dabs
+blue-green #5b7d84
+
+*/
+
+/* About me */
+
+.about-me img {
+    margin: 5px;
+    width: 40%;
+    height: auto;
+    padding: 0 20px;
+    opacity: .5;
+    position: relative;
+    float: left;
+}
+
+.about-me h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    text-align: left;
+    padding: 0 10px;
+    width: auto;
+    float: left;
+
+}
+
+.about-me p {
+    font-size: 15px;
+    margin: 20px;
+    text-align: left;
+    padding: 0 10px;
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.about-me a {
+    color: #5b7d84;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 2px;
+    flex: 1;
+    padding: 0 2px;
+}
+
+/* General Layout */
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+a:hover {
+    color: #e2dabc;
+}
