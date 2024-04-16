@@ -1,13 +1,10 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
+
 
 body {
-    background-color: #0f2045;
+    background-color: seashell;
     opacity: 1;
     font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-    color: #e2dabc;
+    color: midnightblue;
     overflow-x: hidden;
 }
 
@@ -21,16 +18,32 @@ blue-green #5b7d84
 */
 
 /* About me */
-
-.about-me img {
-    margin: 5px;
-    width: 40%;
+header img {
+    max-width: 100%;
+    min-width: 40%;
     height: auto;
-    padding: 0 20px;
-    opacity: .5;
-    position: relative;
-    float: left;
+    opacity: .75;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
 }
+
+.nav {
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* « The magic. */
+}
+
+.nav li {
+    display: inline; /* « More magic. */
+}
+
+.nav a {
+    display: inline-block; /* « Last bit of magic. */
+    padding: 10px;
 
 .about-me h3 {
     font-size: 20px;
@@ -73,3 +86,5 @@ h2 {
 a:hover {
     color: #e2dabc;
 }
+
+ 
