@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jack Kennedy's Portfolio</title>
   <link rel="stylesheet" href="Style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -20,16 +24,18 @@
 <!-- About Me Section -->
 <section id="about">
   <h1>About Me</h1>
-  <!-- Add your bio here -->
-  <p><Hello, I'm Jack Kennedy, an energetic and detail-oriented financial services professional who recently moved to Sydney and is looking for work. With a strong foundation in biomedical engineering and mathematics, I excel in improving internal processes and creating effective automations for teams. My technical proficiency spans across key programming languages such as Python, SQL, and C#, and I'm actively pursuing certifications in Data Analytics and IT Automation with Python from Google.
-
-    My professional journey includes significant roles in data cleansing, transaction processing, and client support, where I've consistently demonstrated a commitment to leveraging technology to solve complex problems. Notable achievements include increasing processing efficiency through improved SQL scripts, developing Excel/VBA macros to automate repetitive tasks, and designing custom Python scripts for data pre-processing. Additionally, I have contributed to innovative solutions such as a custom ChatGPT model for lead qualification, showcasing my ability to integrate technology seamlessly into business operations.
-
-    I hold a degree in Biomedical Engineering from Trinity College Dublin and bring a wealth of experience from roles at the Maples Group and SEI Dublin. Beyond my professional interests, I am passionate about programming, chess, powerlifting, and Muay Thai. Currently, I'm working on a chess game using C#, aiming to build a chess engine and position evaluation feature for chess-bot tournaments.</p>
-  <!-- Link to LinkedIn -->
-  <a href="https://www.linkedin.com/in/jack-r-kennedy/">LinkedIn</a>
+  <!-- Image Carousel -->
+  <div class="carousel">
+    <div><img src="Headshot.jpeg" alt="Jack Kennedy's Headshot"></div>
+    <div><img src="Disneyland.jpg" alt="Jack Kennedy at Disneyland"></div>
+    <div><img src="Liftathon.JPG" alt="Jack Kennedy at Liftathon"></div>
+  </div>
+  <!-- Bio -->
+  <p>Hello, I'm Jack Kennedy, an energetic and detail-oriented financial services professional who recently moved to Sydney and is looking for work. With a strong foundation in biomedical engineering and mathematics, I excel in improving internal processes and creating effective automations for teams. My technical proficiency spans across key programming languages such as Python, SQL, and C#, and I'm actively pursuing certifications in Data Analytics and IT Automation with Python from Google.</p>
+  <p>My professional journey includes significant roles in data cleansing, transaction processing, and client support, where I've consistently demonstrated a commitment to leveraging technology to solve complex problems. Notable achievements include increasing processing efficiency through improved SQL scripts, developing Excel/VBA macros to automate repetitive tasks, and designing custom Python scripts for data pre-processing. Additionally, I have contributed to innovative solutions such as a custom ChatGPT model for lead qualification, showcasing my ability to integrate technology seamlessly into business operations.</p>
+  <p>I hold a degree in Biomedical Engineering from Trinity College Dublin and bring a wealth of experience from roles at the Maples Group and SEI Dublin. Beyond my professional interests, I am passionate about programming, chess, powerlifting, and Muay Thai. Currently, I'm working on a chess game using C#, aiming to build a chess engine and position evaluation feature for chess-bot tournaments.</p>
   <!-- CV Preview -->
-  <iframe src="Jack_Kennedy_CV_May_2024.docx" width="600" height="400"></iframe>
+  <iframe src="Jack_Kennedy_CV_May_2024.docx" width="100%" height="600"></iframe>
 </section>
 
 <!-- Projects & Blog Section -->
@@ -39,17 +45,39 @@
   <ul>
     <li><a href="https://github.com/JackRKennedy">GitHub</a></li>
     <!-- Example project -->
-    <li>Project 1: Description</li>
-    <!-- Add more projects/blog entries as needed -->
+    <li><strong>Project 1: Chess Game using Avalonia UI and C#</strong></li>
+    <p></p>
+    <ul>
+      <li>I have been playing chess for about 6 months, I have seen some improvement, but I thought building a chess game with its own chess engine would help me build knowledge of how a board should be evaluated, deepening my understanding of the game.</li>
+      <li>The desktop is developed more so like a windows form, but since my programming is all done in the macOS environment, I needed to use Avalonia UI and JetBrains Rider as it was the best IDE for the environment</li>
+      <li>So far, I have written the basics of the rules, helped massively by ChatGPT and tutorials from YouTube -> these include all the basics (and newest moves such as En Passant and Castling</li>
+      <li>The next step in this project is the chess engine myself, which I am actively researching, I would like this to include an evaluation bar similar to a certain famous chess website, that displays in real time during the game, helping me see my mistakes LIVE.</li>
+      <li>I would also like to have the ability to load position using FEN notation, so that I can implement an analysis mode (where you try to guess as close as possible to the computers evaluation) or similarly, a puzzle mode</li>
+    </ul>
+    <p></p>
+    <li><strong>Project 2: Typing Test Desktop App using Avalonia UI and C#</strong></li>
+    <p></p>
+    <ul>
+      <li>Very little to report here so far, I have the basic window working, but I am still deciding on how I would like this to be displayed</li>
+    </ul>
+    <p></p>
+    <li><strong>Project 3: A dots calculator for powerlifting</strong></li>
+    <p></p>
+    <ul>
+      <li>Using the IPF formulas found <a href="https://www.powerlifting.sport/rules/codes/info/ipf-formula">here</a> -> this is different from calculators you find online, as it instead tells you what total you have to hit at whatever bodyweight to achieve a desired dots score, which is particularly useful for qualifying for invite only events</li>
+    </ul>
+    <p></p>
   </ul>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
   <h1>Contact</h1>
+  <p><a href="https://www.linkedin.com/in/jack-r-kennedy/">LinkedIn</a></p>
   <p>Email: <a href="mailto:k.jack6@gmail.com">k.jack6@gmail.com</a></p>
   <p>Phone: +61 448 980 542</p>
-  <p>Open to job opportunities in: Fund Adminstration is roles such as Transfer Agency, Data and Reporting and Client/Investor Relations -> I would also love to branch into positions that allow me to utilise my more technical skills, such as a data analyst, junior programmer/developer or a business analyst.  <!-- List job roles/fields you're interested in --></p>
+  <p>Open to job opportunities in: Fund Administration roles such as Transfer Agency, Data and Reporting, and Client/Investor Relations</p>
+  <p>I would also love to branch into positions that allow me to utilise my more technical skills, such as a data analyst, junior programmer/developer, or a business analyst</p>
 </section>
 
 <!-- Web Apps Section -->
@@ -64,5 +92,18 @@
 
 <!-- JavaScript File -->
 <script src="scripts.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+  });
+</script>
 </body>
 </html>

@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #e0e7ff; /* Light complementary background color */
     color: #333;
+    text-align: center; /* Center text */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #003366; /* Primary Deep Blue */
     padding: 1em;
 }
 nav ul {
@@ -17,19 +18,19 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center navigation items */
 }
 nav ul li {
-    margin: 0;
+    margin: 0 1em; /* Add some spacing between items */
 }
 nav ul li a {
-    color: white;
+    color: #FFFFFF; /* White text */
     text-decoration: none;
     padding: 0.5em 1em;
     transition: background-color 0.3s;
 }
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #001F3F; /* Dark Navy on hover */
 }
 
 /* Section Styles */
@@ -37,8 +38,18 @@ section {
     padding: 2em;
     margin: 2em auto;
     width: 80%;
-    background-color: white;
+    background-color: #FFFFFF; /* White background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left within sections */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Carousel Styles */
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners to images */
+    margin-bottom: 1em;
 }
 
 /* Specific Section Styles */
@@ -46,7 +57,10 @@ section {
     border: none;
     margin-top: 1em;
     width: 100%;
-    height: 400px;
+    height: 600px; /* Increase height for better viewing */
 }
 
-/* Add more styles as needed */
+/* Heading Styles */
+h1 {
+    color: #003366; /* Primary Deep Blue */
+}
