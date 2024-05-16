@@ -1,90 +1,52 @@
-
-
+/* General Styles */
 body {
-    background-color: seashell;
-    opacity: 1;
-    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-    color: midnightblue;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-/* 
-Defining color palette for use on website
-
-Blue: #0f2045
-Cream: #e2dabs
-blue-green #5b7d84
-
-*/
-
-/* About me */
-header img {
-    max-width: 100%;
-    min-width: 40%;
-    height: auto;
-    opacity: .75;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 1em;
 }
-
-.nav {
-    border: 1px solid #ccc;
-    border-width: 1px 0;
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center; /* « The magic. */
+    display: flex;
+    justify-content: space-around;
 }
-
-.nav li {
-    display: inline; /* « More magic. */
+nav ul li {
+    margin: 0;
 }
-
-.nav a {
-    display: inline-block; /* « Last bit of magic. */
-    padding: 10px;
-
-.about-me h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px;
-    text-align: left;
-    padding: 0 10px;
-    width: auto;
-    float: left;
-
-}
-
-.about-me p {
-    font-size: 15px;
-    margin: 20px;
-    text-align: left;
-    padding: 0 10px;
-    width: 50%;
-    position: relative;
-    float: left;
-}
-
-.about-me a {
-    color: #5b7d84;
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 15px;
-    margin: 2px;
-    flex: 1;
-    padding: 0 2px;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #555;
 }
 
-/* General Layout */
-
-h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
+/* Section Styles */
+section {
+    padding: 2em;
+    margin: 2em auto;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    color: #e2dabc;
+/* Specific Section Styles */
+#about iframe {
+    border: none;
+    margin-top: 1em;
+    width: 100%;
+    height: 400px;
 }
 
- 
+/* Add more styles as needed */
