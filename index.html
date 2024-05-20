@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jack Kennedy's Portfolio</title>
   <link rel="stylesheet" href="Style.css">
+  <style>
+    html, body {
+      box-sizing: border-box;
+      display: flow-root;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js"></script>
+  <script type="text/javascript">
+    Bokeh.set_log_level("info");
+  </script>
 </head>
+
 <body>
 <!-- Navigation Bar -->
 <nav>
@@ -28,8 +43,9 @@
   <p>Hello, I'm Jack Kennedy, an energetic and detail-oriented financial services professional who recently moved to Sydney and is looking for work. With a strong foundation in biomedical engineering and mathematics, I excel in improving internal processes and creating effective automations for teams. My technical proficiency spans across key programming languages such as Python, SQL, and C#, and I'm actively pursuing certifications in Data Analytics and IT Automation with Python from Google.</p>
   <p>My professional journey includes significant roles in data cleansing, transaction processing, and client support, where I've consistently demonstrated a commitment to leveraging technology to solve complex problems. Notable achievements include increasing processing efficiency through improved SQL scripts, developing Excel/VBA macros to automate repetitive tasks, and designing custom Python scripts for data pre-processing. Additionally, I have contributed to innovative solutions such as a custom ChatGPT model for lead qualification, showcasing my ability to integrate technology seamlessly into business operations.</p>
   <p>I hold a degree in Biomedical Engineering from Trinity College Dublin and bring a wealth of experience from roles at the Maples Group and SEI Dublin. Beyond my professional interests, I am passionate about programming, chess, powerlifting, and Muay Thai. Currently, I'm working on a chess game using C#, aiming to build a chess engine and position evaluation feature for chess-bot tournaments.</p>
+
   <!-- CV Preview -->
-  <iframe src="Jack_Kennedy_CV_May_2024.docx" width="100%" height="600"></iframe>
+  <canvas id="the-canvas"></canvas>
 </section>
 
 <!-- Projects & Blog Section -->
@@ -70,24 +86,66 @@
   <p><a href="https://www.linkedin.com/in/jack-r-kennedy/">LinkedIn</a></p>
   <p>Email: <a href="mailto:k.jack6@gmail.com">k.jack6@gmail.com</a></p>
   <p>Phone: +61 448 980 542</p>
-  <p>Open to job opportunities in: Fund Administration roles such as Transfer Agency, Data and Reporting, and Client/Investor Relations</p>
+  <p>Open to job opportunities in: Fund Administration roles such as Transfer Agency, Data and Reporting, and Client/Investor Relations
+
   <p>I would also love to branch into positions that allow me to utilise my more technical skills, such as a data analyst, junior programmer/developer, or a business analyst</p>
 </section>
 
 <!-- Web Apps Section -->
 <section id="webapps">
   <h1>Web Apps</h1>
-  <!-- Add your web app descriptions and links here -->
   <ul>
     <li>Calculator App: <a href="link-to-your-calculator-app">Link</a></li>
-    <!-- Add more web apps as needed -->
   </ul>
+</section>
+
+<section id="Data_Visualisations">
+  <div id="d807c3bf-9dd8-495a-bb21-64836b06b85c" data-root-id="p1212" style="display: contents;"></div>
+
+  <script type="application/json" id="p1257">
+    {"bb1b3106-b76a-42dc-8fe2-461185db0b0c":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1212","attributes":{"width":1200,"height":800,"x_range":{"type":"object","name":"FactorRange","id":"p1211","attributes":{"factors":["GBR","ITA","FRA","USA","GER","BRA","AUS","FIN","ARG","AUT","NZL","MEX","SUI","JPN","ESP","BEL","SWE","CAN","RUS","RSA","COL","POL","NED","DEN","MON","CHN"]}},"y_range":{"type":"object","name":"DataRange1d","id":"p1214"},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1222"},"y_scale":{"type":"object","name":"LinearScale","id":"p1223"},"title":{"type":"object","name":"Title","id":"p1215","attributes":{"text":"Number of Drivers and Championships by Nationality"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1241","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1208","attributes":{"selected":{"type":"object","name":"Selection","id":"p1209","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1210"},"data":{"type":"map","entries":[["nationalities",["GBR","ITA","FRA","USA","GER","BRA","AUS","FIN","ARG","AUT","NZL","MEX","SUI","JPN","ESP","BEL","SWE","CAN","RUS","RSA","COL","POL","NED","DEN","MON","CHN"]],["drivers",[22,16,15,12,12,9,5,5,4,4,3,3,3,3,3,2,2,2,2,1,1,1,1,1,1,1]],["championships",[20,3,4,2,12,8,4,4,5,4,1,0,0,0,2,0,0,1,0,1,0,0,4,0,0,0]]]}}},"view":{"type":"object","name":"CDSView","id":"p1242","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1243"}}},"glyph":{"type":"object","name":"VBar","id":"p1238","attributes":{"x":{"type":"field","field":"nationalities","transform":{"type":"object","name":"Dodge","id":"p1234","attributes":{"value":-0.25,"range":{"id":"p1211"}}}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"drivers"},"line_color":{"type":"value","value":"#c9d9d3"},"fill_color":{"type":"value","value":"#c9d9d3"},"hatch_color":{"type":"value","value":"#c9d9d3"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1239","attributes":{"x":{"type":"field","field":"nationalities","transform":{"id":"p1234"}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"drivers"},"line_color":{"type":"value","value":"#c9d9d3"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#c9d9d3"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"#c9d9d3"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1240","attributes":{"x":{"type":"field","field":"nationalities","transform":{"id":"p1234"}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"drivers"},"line_color":{"type":"value","value":"#c9d9d3"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#c9d9d3"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"#c9d9d3"},"hatch_alpha":{"type":"value","value":0.2}}}}},{"type":"object","name":"GlyphRenderer","id":"p1253","attributes":{"data_source":{"id":"p1208"},"view":{"type":"object","name":"CDSView","id":"p1254","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1255"}}},"glyph":{"type":"object","name":"VBar","id":"p1250","attributes":{"x":{"type":"field","field":"nationalities","transform":{"type":"object","name":"Dodge","id":"p1246","attributes":{"range":{"id":"p1211"}}}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"championships"},"line_color":{"type":"value","value":"#718dbf"},"fill_color":{"type":"value","value":"#718dbf"},"hatch_color":{"type":"value","value":"#718dbf"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1251","attributes":{"x":{"type":"field","field":"nationalities","transform":{"id":"p1246"}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"championships"},"line_color":{"type":"value","value":"#718dbf"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#718dbf"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"#718dbf"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1252","attributes":{"x":{"type":"field","field":"nationalities","transform":{"id":"p1246"}},"width":{"type":"value","value":0.2},"top":{"type":"field","field":"championships"},"line_color":{"type":"value","value":"#718dbf"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#718dbf"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"#718dbf"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1221"},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1229","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1230","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1231"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1232"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1224","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1225"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1226"},"major_label_orientation":"vertical","major_label_policy":{"type":"object","name":"AllLabels","id":"p1227"}}}],"center":[{"type":"object","name":"Grid","id":"p1228","attributes":{"axis":{"id":"p1224"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1233","attributes":{"dimension":1,"axis":{"id":"p1229"}}},{"type":"object","name":"Legend","id":"p1244","attributes":{"orientation":"horizontal","items":[{"type":"object","name":"LegendItem","id":"p1245","attributes":{"label":{"type":"value","value":"Drivers"},"renderers":[{"id":"p1241"}]}},{"type":"object","name":"LegendItem","id":"p1256","attributes":{"label":{"type":"value","value":"Championships"},"renderers":[{"id":"p1253"}]}}]}}]}}]}}
+  </script>
+
+  <script type="text/javascript">
+    (function() {
+      var fn = function() {
+        Bokeh.safely(function() {
+          (function(root) {
+            function embed_document(root) {
+
+              // Here, parse your JSON text into a JS object
+              var docs_json = JSON.parse(document.getElementById('p1257').textContent);
+
+              var render_items = [{"docid":"bb1b3106-b76a-42dc-8fe2-461185db0b0c","root_ids":["p1212"],"roots":{"p1212":"d807c3bf-9dd8-495a-bb21-64836b06b85c"}}];
+
+              // Now, we're giving embed_items the parsed docs_json
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+
+            }
+
+            if (root.Bokeh !== undefined) {
+              embed_document(root);
+            } else {
+              const loader = setInterval(function() {
+                if (root.Bokeh !== undefined) {
+                  clearInterval(loader);
+                  embed_document(root);
+                }
+              }, 50);
+            }
+          })(window);
+        });
+      };
+      if (document.readyState != "loading") fn();
+      else document.addEventListener("DOMContentLoaded", fn);
+    })();
+  </script>
 </section>
 
 <!-- JavaScript File -->
 <script src="scripts.js"></script>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('.carousel').slick({
       dots: true,
       infinite: true,
@@ -98,6 +156,37 @@
       autoplaySpeed: 2000,
     });
   });
+
+  // Specify the URL of the PDF file
+  var url = './Jack_Kennedy_CV_May_2024.pdf';
+
+  // Create PDFJS document load task
+  var loadingTask = pdfjsLib.getDocument(url);
+  loadingTask.promise.then(function (pdf) {
+    // Fetch the first page
+    pdf.getPage(1).then(function (page) {
+      var scale = 1.5;
+      var viewport = page.getViewport({ scale: scale });
+
+      // Prepare canvas using PDF page dimensions
+      var canvas = document.getElementById('the-canvas');
+      var context = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      // Render PDF page into canvas context
+      var renderContext = {
+        canvasContext: context,
+        viewport: viewport
+      };
+      page.render(renderContext);
+    });
+
+  }).catch(function (reason) {
+    // PDF loading error
+    console.error(reason);
+  });
 </script>
 </body>
+
 </html>
