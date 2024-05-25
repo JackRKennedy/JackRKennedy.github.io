@@ -1,173 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jack Kennedy's Portfolio</title>
   <link rel="stylesheet" href="Style.css">
-  <style>
-    html, body {
-      box-sizing: border-box;
-      display: flow-root;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js"></script>
-  <script type="text/javascript">
-    Bokeh.set_log_level("info");
-  </script>
 </head>
 
 <body>
 <!-- Navigation Bar -->
 <nav>
   <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects & Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#webapps">Web Apps</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="webapps.html">Web Apps</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="data.html">Data and Visualisations</a></li>
   </ul>
 </nav>
 
-<!-- About Me Section -->
-<section id="about">
-  <h1>About Me</h1>
-  <!-- Image Carousel -->
-  <div class="carousel">
-    <div><img src="Headshot.jpeg" alt="Jack Kennedy's Headshot"></div>
-  </div>
-  <!-- Bio -->
-  <p>Hello, I'm Jack Kennedy, an energetic and detail-oriented financial services professional who recently moved to Sydney and is looking for work. With a strong foundation in biomedical engineering and mathematics, I excel in improving internal processes and creating effective automations for teams. My technical proficiency spans across key programming languages such as Python, SQL, and C#, and I'm actively pursuing certifications in Data Analytics and IT Automation with Python from Google.</p>
-  <p>My professional journey includes significant roles in data cleansing, transaction processing, and client support, where I've consistently demonstrated a commitment to leveraging technology to solve complex problems. Notable achievements include increasing processing efficiency through improved SQL scripts, developing Excel/VBA macros to automate repetitive tasks, and designing custom Python scripts for data pre-processing. Additionally, I have contributed to innovative solutions such as a custom ChatGPT model for lead qualification, showcasing my ability to integrate technology seamlessly into business operations.</p>
-  <p>I hold a degree in Biomedical Engineering from Trinity College Dublin and bring a wealth of experience from roles at the Maples Group and SEI Dublin. Beyond my professional interests, I am passionate about programming, chess, powerlifting, and Muay Thai. Currently, I'm working on a chess game using C#, aiming to build a chess engine and position evaluation feature for chess-bot tournaments.</p>
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Hello, I'm Jack Kennedy</p>
+  <a href="about.html">Learn More About Me</a>
+</div>
 
-  <!-- CV Preview -->
-  <canvas id="the-canvas"></canvas>
-</section>
+<!-- Content Section -->
+<div class="content">
+  <section id="contact">
+    <h1>Contact</h1>
+    <p><a href="https://www.linkedin.com/in/jack-r-kennedy/">LinkedIn</a></p>
+    <p>Email: <a href="mailto:k.jack6@gmail.com">k.jack6@gmail.com</a></p>
+    <p>Phone: +61 448 980 542</p>
+    <p>Open to job opportunities in: Fund Administration roles such as Transfer Agency, Data and Reporting, and Client/Investor Relations</p>
+    <p>I would also love to branch into positions that allow me to utilise my more technical skills, such as a data analyst, junior programmer/developer, or a business analyst.</p>
+  </section>
+</div>
 
-<!-- Projects & Blog Section -->
-<section id="projects">
-  <h1>Projects & Blog</h1>
-  <ul>
-    <li><a href="https://github.com/JackRKennedy">GitHub</a></li>
-    <li><strong>Project 1: Chess Game using Avalonia UI and C#</strong></li>
-    <ul>
-      <li>I have been playing chess for about 6 months, I have seen some improvement, but I thought building a chess game with its own chess engine would help me build knowledge of how a board should be evaluated, deepening my understanding of the game.</li>
-      <li>The desktop is developed more so like a windows form, but since my programming is all done in the macOS environment, I needed to use Avalonia UI and JetBrains Rider as it was the best IDE for the environment.</li>
-      <li>So far, I have written the basics of the rules, helped massively by ChatGPT and tutorials from YouTube -> these include all the basics (and newest moves such as En Passant and Castling).</li>
-      <li>The next step in this project is the chess engine itself, which I am actively researching. I would like this to include an evaluation bar similar to a certain famous chess website, that displays in real time during the game, helping me see my mistakes LIVE.</li>
-      <li>I would also like to have the ability to load positions using FEN notation, so that I can implement an analysis mode (where you try to guess as close as possible to the computer's evaluation) or similarly, a puzzle mode.</li>
-    </ul>
-    <li><strong>Project 2: Typing Test Desktop App using Avalonia UI and C#</strong></li>
-    <ul>
-      <li>Very little to report here so far, I have the basic window working, but I am still deciding on how I would like this to be displayed.</li>
-    </ul>
-    <li><strong>Project 3: A dots calculator for powerlifting</strong></li>
-    <ul>
-      <li>Using the IPF formulas found <a href="https://www.powerlifting.sport/rules/codes/info/ipf-formula">here</a> -> this is different from calculators you find online, as it instead tells you what total you have to hit at whatever bodyweight to achieve a desired dots score, which is particularly useful for qualifying for invite-only events.</li>
-    </ul>
-  </ul>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <h1>Contact</h1>
-  <p><a href="https://www.linkedin.com/in/jack-r-kennedy/">LinkedIn</a></p>
-  <p>Email: <a href="mailto:k.jack6@gmail.com">k.jack6@gmail.com</a></p>
-  <p>Phone: +61 448 980 542</p>
-  <p>Open to job opportunities in: Fund Administration roles such as Transfer Agency, Data and Reporting, and Client/Investor Relations</p>
-  <p>I would also love to branch into positions that allow me to utilise my more technical skills, such as a data analyst, junior programmer/developer, or a business analyst.</p>
-</section>
-
-<!-- Web Apps Section -->
-<section id="webapps">
-  <h1>Web Apps</h1>
-  <ul>
-    <li>Calculator App: <a href="link-to-your-calculator-app">Link</a></li>
-  </ul>
-</section>
-
-<!-- Data Visualisations Section -->
-<section id="Data_Visualisations">
-  <div id="graph-container">
-    <div id="d807c3bf-9dd8-495a-bb21-64836b06b85c" data-root-id="p1212"></div>
-  </div>
-
-  <script type="application/json" id="p1257">
-    {"bb1b3106-b76a-42dc-8fe2-461185db0b0c":{"version":"3.3.4","title":"Bokeh Application","roots":{"p1212":"d807c3bf-9dd8-495a-bb21-64836b06b85c"}}}
-  </script>
-
-  <script type="text/javascript">
-    (function() {
-      var fn = function() {
-        Bokeh.safely(function() {
-          (function(root) {
-            function embed_document(root) {
-              var docs_json = JSON.parse(document.getElementById('p1257').textContent);
-              var render_items = [{"docid":"bb1b3106-b76a-42dc-8fe2-461185db0b0c","root_ids":["p1212"],"roots":{"p1212":"d807c3bf-9dd8-495a-bb21-64836b06b85c"}}];
-              root.Bokeh.embed.embed_items(docs_json, render_items);
-            }
-            if (root.Bokeh !== undefined) {
-              embed_document(root);
-            } else {
-              const loader = setInterval(function() {
-                if (root.Bokeh !== undefined) {
-                  clearInterval(loader);
-                  embed_document(root);
-                }
-              }, 50);
-            }
-          })(window);
-        });
-      };
-      if (document.readyState != "loading") fn();
-      else document.addEventListener("DOMContentLoaded", fn);
-    })();
-  </script>
-</section>
-
-
-<!-- JavaScript File -->
 <script src="scripts.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.carousel').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      adaptiveHeight: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
-    });
-  });
-
-  // Specify the URL of the PDF file
-  var url = './Jack_Kennedy_CV_May_2024.pdf';
-
-  // Create PDFJS document load task
-  var loadingTask = pdfjsLib.getDocument(url);
-  loadingTask.promise.then(function (pdf) {
-    // Fetch the first page
-    pdf.getPage(1).then(function (page) {
-      var scale = 1.5;
-      var viewport = page.getViewport({ scale: scale });
-
-      // Prepare canvas using PDF page dimensions
-      var canvas = document.getElementById('the-canvas');
-      var context = canvas.getContext('2d');
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      // Render PDF page into canvas context
-      var renderContext = {
-        canvasContext: context,
-        viewport: viewport
-      };
-      page.render(renderContext);
-    });
-  });
-</script>
+</body>
+</html>

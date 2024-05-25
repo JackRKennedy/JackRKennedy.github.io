@@ -1,9 +1,12 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0e7ff; /* Light complementary background color */
+    background-color: #f0f4f8; /* Light complementary background color */
     color: #333;
     text-align: center; /* Center text */
 }
@@ -12,6 +15,7 @@ body {
 nav {
     background-color: #003366; /* Primary Deep Blue */
     padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 nav ul {
     list-style: none;
@@ -27,24 +31,63 @@ nav ul li a {
     color: #FFFFFF; /* White text */
     text-decoration: none;
     padding: 0.5em 1em;
-    transition: background-color 0.3s;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
 }
 nav ul li a:hover {
     background-color: #001F3F; /* Dark Navy on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('Headshot.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+.hero p {
+    font-size: 1.5em;
+    margin: 0.5em 0 1em;
+}
+.hero a {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.hero a:hover {
+    background-color: #001F3F;
+    transform: scale(1.05);
+}
+
+/* Content Section */
+.content {
+    padding: 2em;
+    background: linear-gradient(to bottom, #f0f4f8, #e0e7ff); /* Smooth gradient background */
 }
 
 /* Section Styles */
 section {
     padding: 2em;
-    margin: 2em auto;
-    width: 80%;
+    margin: 2em 0;
     background-color: #FFFFFF; /* White background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left; /* Align text to the left within sections */
     border-radius: 8px; /* Add rounded corners */
 }
 
-/* Carousel Styles */
 .carousel img {
     width: 100%;
     height: auto;
@@ -53,47 +96,30 @@ section {
     max-width: 600px; /* Adjust the value as needed */
 }
 
-/* Specific Section Styles */
-#about iframe {
-    border: none;
-    margin-top: 1em;
-    width: 100%;
-    height: 600px; /* Increase height for better viewing */
-}
-
-/* Heading Styles */
-h1 {
+.section-title {
     color: #003366; /* Primary Deep Blue */
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-/* Data Visualisations Styles */
-/* General Container Styles */
-#graph-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pdf-viewer {
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
+    height: 90vh;
+    border: none;
+}
+
+button {
+    background-color: #003366; /* Primary Deep Blue */
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
-
-#Data_Visualisations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+button:hover {
+    background-color: #001F3F; /* Dark Navy on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
-
-#Data_Visualisations div {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-}
-
