@@ -48,8 +48,9 @@ section {
 .carousel img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Add rounded corners to images */
+    border-radius: 8px;
     margin-bottom: 1em;
+    max-width: 600px; /* Adjust the value as needed */
 }
 
 /* Specific Section Styles */
@@ -64,3 +65,35 @@ section {
 h1 {
     color: #003366; /* Primary Deep Blue */
 }
+
+/* Data Visualisations Styles */
+/* General Container Styles */
+#graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Data_Visualisations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Data_Visualisations div {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
