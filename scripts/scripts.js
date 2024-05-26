@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Example animation: Smooth scrolling for navigation
+    // Smooth scrolling for navigation
     const links = document.querySelectorAll('nav ul li a');
     for (const link of links) {
         link.addEventListener('click', function (event) {
@@ -15,7 +15,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add PDF display
+    // Carousel scripting
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+
+    function showCarouselItem(n) {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (n + items.length) % items.length;
+        items[currentIndex].classList.add('active');
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        showCarouselItem(currentIndex - 1);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        showCarouselItem(currentIndex + 1);
+    });
+
+    showCarouselItem(currentIndex);
+
+    // Add PDF display (make sure you have included pdfjsLib library)
     // Specify the URL of the PDF file
     var url = 'Jack_Kennedy_CV_May_2024.pdf';
 

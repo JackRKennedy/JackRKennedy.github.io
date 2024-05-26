@@ -8,7 +8,6 @@ body {
     padding: 0;
     background-color: #f0f4f8; /* Light complementary background color */
     color: #333;
-    text-align: center; /* Center text */
 }
 
 /* Navigation Bar */
@@ -16,27 +15,30 @@ nav {
     background-color: #003366; /* Primary Deep Blue */
     padding: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center;
 }
 nav ul li {
-    margin: 0 1em; /* Add some spacing between items */
+    margin: 0 1em;
 }
 nav ul li a {
     color: #FFFFFF; /* White text */
     text-decoration: none;
     padding: 0.5em 1em;
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 4px;
     transition: background-color 0.3s, transform 0.3s;
 }
 nav ul li a:hover {
     background-color: #001F3F; /* Dark Navy on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -75,29 +77,21 @@ nav ul li a:hover {
 /* Content Section */
 .content {
     padding: 2em;
-    background: linear-gradient(to bottom, #f0f4f8, #e0e7ff); /* Smooth gradient background */
+    background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);
 }
 
 /* Section Styles */
 section {
     padding: 2em;
     margin: 2em 0;
-    background-color: #FFFFFF; /* White background */
+    background-color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left within sections */
-    border-radius: 8px; /* Add rounded corners */
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
+    text-align: left;
     border-radius: 8px;
-    margin-bottom: 1em;
-    max-width: 600px; /* Adjust the value as needed */
 }
 
 .section-title {
-    color: #003366; /* Primary Deep Blue */
+    color: #003366;
     font-size: 2em;
     margin-bottom: 1em;
     text-align: center;
@@ -110,7 +104,7 @@ section {
 }
 
 button {
-    background-color: #003366; /* Primary Deep Blue */
+    background-color: #003366;
     color: #fff;
     border: none;
     padding: 1em 2em;
@@ -120,8 +114,8 @@ button {
     transition: background-color 0.3s, transform 0.3s;
 }
 button:hover {
-    background-color: #001F3F; /* Dark Navy on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
+    background-color: #001F3F;
+    transform: scale(1.05);
 }
 
 /* Calculator */
@@ -181,7 +175,6 @@ form#calculator-form .radio-container input[type="radio"] {
 form#calculator-form .radio-container label {
     margin-right: 1em; /* Ensure there's space between label and next radio button */
 }
-
 section h1.center-text {
     text-align: center;
 }
@@ -194,4 +187,51 @@ h2#result {
 }
 .hidden {
     display: none;
+}
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel img, .carousel video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
