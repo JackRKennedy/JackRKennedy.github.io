@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('nav ul li a');
     for (const link of links) {
         link.addEventListener('click', function (event) {
-            event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+            if (targetSection) { // check if the target section exists on the page
+                event.preventDefault();
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            } // if targetSection does not exist, do nothing and let the browser handle the navigation
         });
     }
 

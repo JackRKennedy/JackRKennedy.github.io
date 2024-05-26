@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data and Visualisation</title>
+    <link rel="stylesheet" href="../stylesheets/Style.css">
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="../webpages/index.html">Home</a></li>
+        <li><a href="../webpages/about.html">About Me</a></li>
+        <li><a href="../webpages/data.html">Data and Visualisations</a></li>
+        <li><a href="../webpages/projects.html">Projects</a></li>
+        <li><a href="../webpages/webapps.html">Web Apps</a></li>
+        <li><a href="../webpages/cv.html">CV</a></li>
+    </ul>
+</nav>
+
+<section id="House MD Visualisations">
+    <div class="content">
+        <h2 class="section-title">House MD Visualisations</h2>
+        <p>Got some inspiration from a sparkline graph I saw on the amount of words spoken by each character in the office
+            over time, never worked with sparkline graphs before and thought it would be interesting to see not only the
+            amount of words spoken by each main character in the House series, but also a word cloud
+            of the most popular words.</p>
+        <p>The dataset used for this was gathered from <a href="https://www.kaggle.com/datasets/kunalbhar/house-md-transcripts">Kaggle</a> which I will get most of my data from going forward.</p>
+        <p>If you want to use this dataset, there are a couple of things to be mindful of, which I learned when I had to further clean the data:</p>
+        <ul>
+            <li>The encoding for this file is not standard UTF-8, you will need to convert this file to the standard encoding, but also be aware of the data loss associated with this change, as the original encoding puts the language as Turkish I believe.</li>
+            <li>The breakdown in columns isn't as simple as 'name' and 'line' as you may think, as the 'name' columns often contains variations of the characters names such as "House [Whines]", so you need to use regex, or whatever fits best for your needs, to successfully extract all words from characters.</li>
+            <li>I used a very simple implementation of regex that you can see here: <img src="../images/house_regex.png" style="max-width: 100%" alt="Regex Code Snippet"> </li>
+            <li>This was all written using Jetbrains DataSpell and Jupyter Notebooks, the full breakdown of which can be seen <a href="https://github.com/JackRKennedy/HouseMDTranscripts">here</a></li>
+        </ul>
+        <div class="carousel">
+            <img src="../visualisations/wordCount.png" alt="Sparkline graph showing amount of words spoken by each main character of House over time." style="max-width:100%;">
+            <img src="../visualisations/wordcloud.png" alt="Word cloud of most common words spoken in House" style="max-width:100%">
+        </div>
+    </div>
+</section>
+<script src="../scripts/scripts.js"></script>
+</body>
+</html>
