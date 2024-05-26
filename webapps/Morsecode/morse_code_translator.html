@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+    <link rel="stylesheet" href="../../stylesheets/Style.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../webpages/about.html">About Me</a></li>
+        <li><a href="../../webpages/data.html">Data and Visualisations</a></li>
+        <li><a href="../../webpages/projects.html">Projects</a></li>
+        <li><a href="../../webpages/webapps.html">Web Apps</a></li>
+        <li><a href="../../webpages/cv.html">CV</a></li>
+    </ul>
+</nav>
+
+<h1 style="text-align: center;">Morse Code Translator</h1>
+<p style="text-align: center;">Nothing particularly exciting here except that I was looking up Morse Code one day and thought to myself "How hard can it really be to translate this"</p>
+<div class="content">
+    <section id="morse-code-translator">
+        <h1 style="text-align: center;">Translate English to Morse Code and Vice Versa</h1>
+        <form id="translator-form">
+            <label for="inputText">Enter Text:</label>
+            <textarea id="inputText" rows="4" required></textarea>
+            <br><br>
+
+            <label>Translate to:</label>
+            <div class="radio-container">
+                <input type="radio" id="toMorse" name="translationType" value="toMorse" required>
+                <label for="toMorse">Morse Code</label>
+                <input type="radio" id="toEnglish" name="translationType" value="toEnglish" required>
+                <label for="toEnglish">English</label>
+            </div>
+            <br><br>
+            <input type="submit" value="Translate">
+        </form>
+        <h2 id="result" class="center-text"></h2>
+    </section>
+</div>
+
+<script src="../../scripts/morse_code.js"></script>
+</body>
+</html>

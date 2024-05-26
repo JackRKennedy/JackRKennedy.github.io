@@ -6,19 +6,20 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8; /* Light complementary background color */
+    background-color: #f0f4f8;
     color: #333;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #003366; /* Primary Deep Blue */
+    background-color: #003366;
     padding: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -26,18 +27,21 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 1em;
 }
+
 nav ul li a {
-    color: #FFFFFF; /* White text */
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 4px;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 nav ul li a:hover {
-    background-color: #001F3F; /* Dark Navy on hover */
+    background-color: #001F3F;
     transform: scale(1.05);
 }
 
@@ -50,16 +54,13 @@ nav ul li a:hover {
     align-items: center;
     color: #fff;
     text-align: center;
-    flex-direction: column;
 }
+
 .hero h1 {
     font-size: 3em;
     margin: 0;
 }
-.hero p {
-    font-size: 1.5em;
-    margin: 0.5em 0 1em;
-}
+
 .hero a {
     display: inline-block;
     background-color: #003366;
@@ -69,6 +70,7 @@ nav ul li a:hover {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 .hero a:hover {
     background-color: #001F3F;
     transform: scale(1.05);
@@ -80,7 +82,6 @@ nav ul li a:hover {
     background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);
 }
 
-/* Section Styles */
 section {
     padding: 2em;
     margin: 2em 0;
@@ -113,81 +114,12 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 button:hover {
     background-color: #001F3F;
     transform: scale(1.05);
 }
 
-/* Calculator */
-form#calculator-form {
-    margin: 2em auto;
-    padding: 1em;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 500px;
-}
-form#calculator-form label {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 0.5em;
-    display: block;
-}
-form#calculator-form input[type="number"],
-form#calculator-form input[type="radio"] {
-    width: calc(100% - 1em);
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border-radius: 4px;
-    border: 1px solid #CCC;
-    display: inline-block;
-    box-sizing: border-box;
-}
-form#calculator-form input[type="radio"] {
-    width: auto;
-    margin-right: 0.5em;
-}
-form#calculator-form input[type="submit"] {
-    font-size: 1em;
-    padding: 0.5em 1em;
-    background-color: #003366;
-    color: #FFF;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-form#calculator-form input[type="submit"]:hover {
-    background-color: #001F3F;
-    transform: scale(1.05);
-}
-form#calculator-form .radio-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center the items horizontally */
-    align-items: center;
-    gap: 1em; /* Add some space between the items */
-    margin-bottom: 1em;
-}
-form#calculator-form .radio-container input[type="radio"] {
-    margin-right: 0.5em;
-}
-form#calculator-form .radio-container label {
-    margin-right: 1em; /* Ensure there's space between label and next radio button */
-}
-section h1.center-text {
-    text-align: center;
-}
-section h2.center-text {
-    text-align: center;
-}
-h2#result {
-    font-size: 1.5em;
-    color: #003366;
-}
-.hidden {
-    display: none;
-}
 /* Carousel Styles */
 .carousel {
     position: relative;
@@ -234,4 +166,63 @@ h2#result {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Translator Form Styles */
+form#translator-form {
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: left;
+}
+
+form#translator-form label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+form#translator-form textarea {
+    width: calc(100% - 1em);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+form#translator-form input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+form#translator-form input[type="submit"] {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background-color: #003366;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form#translator-form .radio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Result Styles */
+h2#result {
+    font-size: 1.5em;
+    color: #003366;
+    text-align: center;
 }
