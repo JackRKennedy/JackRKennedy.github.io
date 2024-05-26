@@ -123,3 +123,75 @@ button:hover {
     background-color: #001F3F; /* Dark Navy on hover */
     transform: scale(1.05); /* Slightly increase size on hover */
 }
+
+/* Calculator */
+form#calculator-form {
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+}
+form#calculator-form label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    display: block;
+}
+form#calculator-form input[type="number"],
+form#calculator-form input[type="radio"] {
+    width: calc(100% - 1em);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    display: inline-block;
+    box-sizing: border-box;
+}
+form#calculator-form input[type="radio"] {
+    width: auto;
+    margin-right: 0.5em;
+}
+form#calculator-form input[type="submit"] {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background-color: #003366;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+form#calculator-form input[type="submit"]:hover {
+    background-color: #001F3F;
+    transform: scale(1.05);
+}
+form#calculator-form .radio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    gap: 1em; /* Add some space between the items */
+    margin-bottom: 1em;
+}
+form#calculator-form .radio-container input[type="radio"] {
+    margin-right: 0.5em;
+}
+form#calculator-form .radio-container label {
+    margin-right: 1em; /* Ensure there's space between label and next radio button */
+}
+
+section h1.center-text {
+    text-align: center;
+}
+section h2.center-text {
+    text-align: center;
+}
+h2#result {
+    font-size: 1.5em;
+    color: #003366;
+}
+.hidden {
+    display: none;
+}
