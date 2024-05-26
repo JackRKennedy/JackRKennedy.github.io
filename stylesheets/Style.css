@@ -44,12 +44,12 @@ nav ul li a:hover {
     background-color: #001F3F;
     transform: scale(1.05);
 }
-
-/* Hero Section */
+/* Ensure the hero content is centered and stacked */
 .hero {
     background: url('../images/Headshot.jpeg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
+    flex-direction: column;  /* Ensure children are stacked */
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -61,6 +61,10 @@ nav ul li a:hover {
     margin: 0;
 }
 
+.hero p {
+    margin: 1em 0;
+}
+
 .hero a {
     display: inline-block;
     background-color: #003366;
@@ -69,12 +73,14 @@ nav ul li a:hover {
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
+    margin: 0.5em 0;  /* Ensure space between buttons */
 }
 
 .hero a:hover {
     background-color: #001F3F;
     transform: scale(1.05);
 }
+
 
 /* Content Section */
 .content {
