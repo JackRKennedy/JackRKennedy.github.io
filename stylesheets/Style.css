@@ -47,7 +47,7 @@ nav ul li a:hover {
 /* Ensure the hero content is centered and stacked */
 .hero {
     background: url('../images/Headshot.jpeg') no-repeat center center/cover;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;  /* Ensure children are stacked */
     justify-content: center;
@@ -138,6 +138,10 @@ button:hover {
     display: none;
     position: relative;
     text-align: center;
+
+    width:100vw;
+    height:75vh;
+    overflow: hidden;
 }
 
 .carousel-item.active {
@@ -146,7 +150,8 @@ button:hover {
 
 .carousel img, .carousel video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
 }
 
